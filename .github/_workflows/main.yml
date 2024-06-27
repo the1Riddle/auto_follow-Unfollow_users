@@ -1,0 +1,24 @@
+name: Follow-Unfollow GitHub Users
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # Runs at midnight UTC every day
+  workflow_dispatch:     # Allows the workflow to be run manually
+
+jobs:
+  follow-unfollow:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up jq
+        run: sudo apt-get install jq
+
+      - name: Run follow-unfollow script
+        env:
+          GITHUB_USERNAME: ${{ secrets.USAGE_NAME }}
+          USAGE_TOKEN: ${{ secrets.USAGE_TOKEN }}
+        run: |
+          ./script.sh
