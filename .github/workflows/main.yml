@@ -21,4 +21,4 @@ jobs:
           GITHUB_USERNAME: ${{ secrets.USAGE_NAME }}
           USAGE_TOKEN: ${{ secrets.USAGE_TOKEN }}
         run: |
-          ./script.sh
+          bash script.sh
