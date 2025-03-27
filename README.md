@@ -1,7 +1,5 @@
 # Automated GitHub Follower Management
 
-__info from the owner__
-
 ## License
 
 This template and the code in it is licensed under the [MIT License](https://github.com/the-1Riddle/Auto_Follow_Unfollow/blob/main/LICENSE).
